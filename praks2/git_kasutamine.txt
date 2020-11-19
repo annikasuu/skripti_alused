@@ -1,0 +1,27 @@
+1. Paigaldamine
+apt-get install git
+
+2. Seadistamine
+https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+Your identity
+git config --global user.name "Eesnimi Perenimi"
+git config --global user.email kasutaja@domeen.com
+git config --global core.editor nano
+
+3. Kasutamine
+a. Alguses ainult üks kord selles kataloogis, kus planeerime skripte hoida ja muuta, teeme:
+git init
+b. Iga failiga(eeldusel, et fail on juba olemas) teeme:
+git status (kontrollime faili staatust)
+git add failinimi (lisame faili commit-imisele ehk jälgimisele)
+git commit -m "muudatuse kirjeldus" (lisame, mida tegime)
+c. Muudatuste ajaloo jälgimine:
+git log
+git show commit_hash
+
+4. Remote github.com-le
+a. Loo GitHub.com lehel repositoorium
+b. Tekita ühendus GitHub-i repositoorimiga, selleks (teha ainult üks kord alguses):
+git remote add origin https://github.com/annikasuu/skripti_alused.git
+c. Iga muudatuse korral lükka lokaalne ajalugu Github-i (seda peab tegema pidevalt):
+git push -u origin master
